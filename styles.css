@@ -1,0 +1,91 @@
+/* General page styling */
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 50px;
+    background: #f2f2f2;
+    color: #333;
+    margin: 0;
+}
+
+/* Heading style */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+/* Correct class name for image container */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+/* Style and animate the images */
+.data-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image hover effect */
+.data-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Selected image effect */
+.data-image.selected {
+    border: 5px solid #4CAF50;
+    transform: scale(1.1);
+}
+
+/* Button styling */
+button {
+    background-color: #1a0d58;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #f4900e;
+    transform: scale(1.05);
+}
+
+/* Message style */
+#message {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    color: #333;
+    display: none;
+    animation: popUp 0.5s ease-in-out forwards;
+}
+
+/* Pop-up animation for message */
+@keyframes popUp {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
